@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '35 16 * * *'  # Runs at 16:35 UTC (1:35 AM JST next day)
     - cron: '25 7 * * *'    # Runs at 07:25 UTC (4:25 PM JST)
+    - cron: '12 14 * * *'    # Runs at 07:25 UTC (4:25 PM JST)
   workflow_dispatch:  # Allows manual trigger if needed
 
 jobs:
