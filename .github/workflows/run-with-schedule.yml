@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: '30 00 * * *'  # 7:30 AM Vietnam time (00:30 UTC)
     - cron: '30 09 * * *'  # 4:30 PM Vietnam time (09:30 UTC)
-    - cron: '20 07 * * *'  # 2:20 PM Vietnam time (07:20 UTC)
-  workflow_dispatch:  # Allows manual trigger if needed
+    - cron: '21 07 * * *'  # 2:20 PM Vietnam time (07:20 UTC)
 
 jobs:
   run-checkin-script:
