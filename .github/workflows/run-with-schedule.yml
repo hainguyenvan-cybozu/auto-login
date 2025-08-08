@@ -1,0 +1,28 @@
+name: Run script with schedule
+
+on:
+  schedule:
+    - cron: '35 16 * * *'  # Runs at 16:35 UTC (1:35 AM JST next day)
+    - cron: '25 7 * * *'    # Runs at 07:25 UTC (4:25 PM JST)
+  workflow_dispatch:  # Allows manual trigger if needed
+
+jobs:
+  run-checkin-script:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python 3
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install -r requirements.txt
+    
+    - name: Run checkin script
+      run: |
+        python3 run-with-secure-domain.py
