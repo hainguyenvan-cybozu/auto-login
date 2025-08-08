@@ -2,9 +2,9 @@ name: Run script with schedule
 
 on:
   schedule:
-    - cron: '35 16 * * *'  # Runs at 16:35 UTC (1:35 AM JST next day)
-    - cron: '25 7 * * *'    # Runs at 07:25 UTC (4:25 PM JST)
-    - cron: '12 14 * * *'    # Runs at 07:25 UTC (4:25 PM JST)
+    - cron: '30 00 * * *'  # 7:30 AM Vietnam time (00:30 UTC)
+    - cron: '30 09 * * *'  # 4:30 PM Vietnam time (09:30 UTC)
+    - cron: '20 07 * * *'  # 2:20 PM Vietnam time (07:20 UTC)
   workflow_dispatch:  # Allows manual trigger if needed
 
 jobs:
