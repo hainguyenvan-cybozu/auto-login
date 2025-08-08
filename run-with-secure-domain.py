@@ -74,7 +74,7 @@ if __name__ == '__main__':
     weekday_check = check_weekday()
     if not weekday_check:
         print("Not at weekday - no action needed")
-        return
+        exit(0)
 
     open_chrome_with_url("https://bozuman.cybozu.com/k/36510/?action=1")
 
