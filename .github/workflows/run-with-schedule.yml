@@ -5,16 +5,18 @@ on:
     - cron: '30 00 * * *'  # 7:30 AM Vietnam time (00:30 UTC)
     - cron: '30 09 * * *'  # 4:30 PM Vietnam time (09:30 UTC)
     - cron: '21 07 * * *'  # 2:20 PM Vietnam time (07:20 UTC)
+  workflow_dispatch:  # Allows manual trigger if needed
 
 jobs:
   run-checkin-script:
     runs-on: macos-latest
+    permissions: write-all
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3  # Updated to v3
     
     - name: Set up Python 3
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.11'
     
